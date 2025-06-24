@@ -1,2 +1,2 @@
 # python-swos-lite
-Python library to interact with MikroTik with SwitchOS Lite
+Python library to interact with MikroTik SwitchOS Lite
