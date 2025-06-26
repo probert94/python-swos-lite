@@ -1,6 +1,6 @@
 import re
 import demjson3
-from typing import Any, List, Type, get_args
+from typing import List, Type, get_args
 
 def hex_to_bool_list(value: int, length: int = 24) -> List[bool]:
     """Converts an integer into a list of booleans.
