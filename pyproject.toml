@@ -1,6 +1,6 @@
 [project]
 name = "python-swos-lite"
-version = "0.0.1"
+version = "0.0.2"
 description = "Python library to interact with MikroTik SwitchOS Lite"
 authors = [
   { name = "Robert Pattis" },
@@ -16,7 +16,7 @@ keywords = [
   "api",
 ]
 dependencies = [
-  "aiohttp>=3.8.5",
+  "aiohttp>=3.12.8",
   "demjson3>=3.0.6"
 ]
 [project.urls]

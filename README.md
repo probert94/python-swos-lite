@@ -23,7 +23,7 @@ pip install python-swos-lite
 
 ## Dependencies
 
-- aiohttp 3.8.5 or higher – for HTTP communication with the switch
+- aiohttp 3.12.8 or higher – for HTTP communication with the switch
 - demjson3 3.0.6 or higher - for tolerant JSON parsing
 
 ## Usage Example
@@ -36,8 +36,8 @@ from swos_lite.endpoints.sys import SystemEndpoint
 from swos_lite.endpoints.poe import PoEEndpoint
 
 async def main():
-    (digest_auth) = DigestAuthMiddleware(login="user", password="password")
-    async with ClientSession() as session:
+    digest_auth = DigestAuthMiddleware(login="user", password="password")
+    async with ClientSession(middlewares=(digest_auth,)) as session:
         session._middlewares = (digest_auth,)
         client = Client(session, "http://swos-lite.local")
         await client.fetch(SystemEndpoint)
