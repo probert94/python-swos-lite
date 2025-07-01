@@ -16,9 +16,11 @@ keywords = [
   "api",
 ]
 dependencies = [
-  "aiohttp>=3.11.16",
   "demjson3>=3.0.6"
 ]
+[project.optional-dependencies]
+aiohttp = ["aiohttp >= 3.12"]
+httpx = ["httpx >= 0.28"]
 [project.urls]
 Homepage = "https://github.com/probert94/python-swos-lite"
 [build-system]
