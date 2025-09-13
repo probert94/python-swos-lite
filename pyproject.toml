@@ -1,6 +1,6 @@
 [project]
 name = "python-swos-lite"
-version = "0.0.4"
+version = "0.0.5"
 description = "Python library to interact with MikroTik SwitchOS Lite"
 authors = [
   { name = "Robert Pattis" },
