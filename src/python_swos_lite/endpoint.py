@@ -27,7 +27,9 @@ def readDataclass(cls: Type[T], data: str) -> T:
     portCount: int = len(firstArrValue) if isinstance(firstArrValue, list) else 0
     for f in fields(cls):
         metadata = f.metadata
-        value = jsonData[metadata.get("name")]
+        value = jsonData.get(metadata.get("name"))
+        if value is None:
+            continue
         type: FieldType = cast(FieldType, metadata.get("type"))
         match type:
             case "bool":

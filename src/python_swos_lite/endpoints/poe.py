@@ -27,12 +27,12 @@ State = Literal[
 @dataclass
 class PoEEndpoint(SwOSLiteEndpoint):
     """Represents the endpoint providing POE information for each individual port."""
-    out: List[PoEOut] = field(metadata={"name": "i01", "type": "option", "options": PoEOut})
-    priority: List[int] = field(metadata={"name": "i02", "type": "int"})
-    voltageLevel: List[VoltageLevel] = field(metadata={"name": "i03", "type": "option", "options": VoltageLevel})
-    lldpEnabled: List[bool] = field(metadata={"name": "i0a", "type": "bool"})
-    lldpPower: List[float] = field(metadata={"name": "i0b", "type": "int", "scale": 10})
-    state: List[State] = field(metadata={"name": "i04", "type": "option", "options": State})
-    current: List[int] = field(metadata={"name": "i05", "type": "int"})
-    voltage: List[float] = field(metadata={"name": "i06", "type": "int", "scale": 10})
-    power: List[float] = field(metadata={"name": "i07", "type": "int", "scale": 10})
+    out: List[PoEOut] = field(metadata={"name": "i01", "type": "option", "options": PoEOut}, default=None)
+    priority: List[int] = field(metadata={"name": "i02", "type": "int"}, default=None)
+    voltageLevel: List[VoltageLevel] = field(metadata={"name": "i03", "type": "option", "options": VoltageLevel}, default=None)
+    lldpEnabled: List[bool] = field(metadata={"name": "i0a", "type": "bool"}, default=None)
+    lldpPower: List[float] = field(metadata={"name": "i0b", "type": "int", "scale": 10}, default=None)
+    state: List[State] = field(metadata={"name": "i04", "type": "option", "options": State}, default=None)
+    current: List[int] = field(metadata={"name": "i05", "type": "int"}, default=None)
+    voltage: List[float] = field(metadata={"name": "i06", "type": "int", "scale": 10}, default=None)
+    power: List[float] = field(metadata={"name": "i07", "type": "int", "scale": 10}, default=None)
