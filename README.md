@@ -1,6 +1,10 @@
 # python-swos-lite
 Python library to interact with MikroTik SwitchOS Lite
 
+> [!CAUTION]
+> This library is **deprecated** and no longer maintained.  
+> It has been replaced by [python-switchos](https://github.com/probert94/python-switchos), which supports **SwitchOS** and **SwitchOS Lite**. 
+
 ## Features
 
 - Get identity, model, serial number, OS version, MAC and IP address
